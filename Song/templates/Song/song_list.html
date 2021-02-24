@@ -1,0 +1,45 @@
+{% extends 'Song/index.html' %}
+
+{% block content %}
+<div class="songForm">
+<table class='table'>
+  <theat>
+    <tr>
+      <td>Título</td>
+      <td>Duração</td>
+      <td>Spotify</td>
+      <td>Youtube</td>
+      <td>Artista</td>
+      <td>
+        <a href="{% url 'song_insert'%}">
+          +
+        </a>
+      </td>
+    </tr>
+  </theat>
+  <tbody>
+    {% for song in song_list %}
+      <tr>
+        <td>{{ song.title }}</td>
+        <td>{{ song.duration }}</td>
+        <td>{{ song.spotify_published }}</td>
+        <td>{{ song.youtube_published }}</td>
+        <td>{{ song.artist }}</td>
+        <td>
+          <a href="{% url 'song_update' song.id%}">
+            M
+          </a>
+          <form action="{% url 'song_delete' song.id%}" method="post">
+            {% csrf_token %}
+            <button type="submit">
+              D
+            </button>
+          </form>
+        </td>
+
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock content %}

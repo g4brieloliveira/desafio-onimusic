@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/* ===== Header ===== */
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  background-color: black;
+
+  position: fixed;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  font-family: 'Rajdhani', sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+header h1 strong {
+  color: #ffdc00;
+}
+
+.button-container{
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+header .a1{
+  width: 1px;
+  height: 2rem;
+  background-color: white;
+}
+
+header .seeList {
+  width: 11rem;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  padding: .5rem;
+
+  transform: scale(1);
+
+  transition: all ease .3s;
+}
+
+header .seeList:hover {
+  transform: scale(1.1);
+}
+
+header .seeList img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* ===== Form ===== */
+.songForm form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100%;
+
+  align-items: center;
+
+  background-color: #ffdc00;
+}
+
+.songForm form h1 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+.songForm form .form-group input {
+  width: 75vw;
+
+  height: 2rem;
+
+  padding: 1rem;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+
+  border: 1px solid black;
+  border-radius: .35rem;
+}
+
+.songForm form .row {
+  display: flex;
+  width: 75vw;
+
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.songForm form .row input {
+  width: 60vw;
+}
+
+.songForm form .row #div_id_spotify_published,
+.songForm form .row #div_id_youtube_published {
+  display: flex;
+  flex-direction: column-reverse;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.songForm form .row #div_id_spotify_published input,
+.songForm form .row #div_id_youtube_published input {
+  width: 3rem;
+}
+
+.songForm form .buttons {
+  width: 75vw;
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.songForm form .buttons select {
+  background-color: white;
+
+  width: 120%;
+  padding: .5rem;
+  margin-top: .3rem;
+
+  border-radius: .4rem;
+  border: 1px solid black;
+}
+
+.songForm form .buttons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60%;
+  padding: .5rem;
+
+  border: 1px solid black;
+  border-radius: .4rem;
+  background-color: rgb(0, 255, 0);
+  transform: scale(1);
+  text-align: center;
+
+
+  transition: all ease .3s;
+}
+
+.songForm form .buttons button p {
+  width: 100%;
+}
+
+.songForm form .buttons button span{
+  float: right;
+}
+
+.songForm form .buttons button:hover {
+  background-color: rgb(0, 200, 0);
+
+  transform: scale(1.01);
+}
+
+.songForm form .buttons button img {
+  float: right;
+
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.asteriskField {
+  color: red;
+}
+
+@media(max-width: 780px){
+  * {
+    font-size: 94%;
+  }
+
+  .songForm form h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header .seeList {
+    font-size: .6rem;
+  }
+
+  header .seeList img {
+    width: .8rem;
+    margin-left: -.9rem;
+  }
+
+
+  .songForm form .row input {
+    width: 40vw;
+  }
+
+  .songForm form .buttons button {
+    height: 2rem;
+    width: 50%;
+  }
+
+  .songForm form .buttons select {
+    width: 90%;
+  }
+
+  
+}
+
+@media(max-width: 410px){
+  .button-container{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  header .a1{
+    width: 55%;
+    height: 1px;
+    background-color: white;
+  }
+}
+
+.principal a {
+  background-color: blue;
+  color: white;
+  border: 1px solid black;
+  padding: 1rem;
+}
