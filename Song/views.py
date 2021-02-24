@@ -27,12 +27,11 @@ def song_form(request, id = 0):
       form = SongForm(request.POST,instance = song)
     if form.is_valid():
       form.save()
-      messages.info(request, 'Música enviada com sucesso!')
-      
-    return redirect('/song')
+
+    return redirect('/register')
 
 def song_delete(request, id):
   song = Song.objects.get(pk = id)
   song.delete()
   
-  return redirect('/song/list')
+  return redirect('/list')
