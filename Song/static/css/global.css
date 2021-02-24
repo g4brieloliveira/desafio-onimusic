@@ -36,14 +36,14 @@ header h1 strong {
   color: #ffdc00;
 }
 
-.button-container{
+.button-container {
   display: flex;
   justify-content: flex-end;
 
   width: 100%;
 }
 
-header .a1{
+header .a1 {
   width: 1px;
   height: 2rem;
   background-color: white;
@@ -72,7 +72,7 @@ header .seeList img {
   height: 1.2rem;
 }
 
-/* ===== Form ===== */
+/* ===== Register Page ===== */
 .songForm form {
   display: flex;
   flex-direction: column;
@@ -112,7 +112,6 @@ header .seeList img {
 
   align-items: center;
   justify-content: space-between;
-
 }
 
 .songForm form .row input {
@@ -166,7 +165,6 @@ header .seeList img {
   transform: scale(1);
   text-align: center;
 
-
   transition: all ease .3s;
 }
 
@@ -174,7 +172,7 @@ header .seeList img {
   width: 100%;
 }
 
-.songForm form .buttons button span{
+.songForm form .buttons button span {
   float: right;
 }
 
@@ -195,7 +193,7 @@ header .seeList img {
   color: red;
 }
 
-@media(max-width: 780px){
+@media(max-width: 780px) {
   * {
     font-size: 94%;
   }
@@ -231,29 +229,27 @@ header .seeList img {
   .songForm form .buttons select {
     width: 90%;
   }
-
-  
 }
 
-@media(max-width: 410px){
-  .button-container{
+@media(max-width: 410px) {
+  .button-container {
     width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
   }
-  
-  header .a1{
+
+  header .a1 {
     width: 55%;
     height: 1px;
     background-color: white;
   }
 }
 
-.principal a {
-  background-color: blue;
-  color: white;
-  border: 1px solid black;
-  padding: 1rem;
+/* ===== Principal Page ===== */
+.principal header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
