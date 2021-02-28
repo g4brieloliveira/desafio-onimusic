@@ -7,7 +7,7 @@
     <a href="https://github.com/g4brieloliveira/desafio-onimusic">
       <h1 align="center">Music<strong>Oni</strong></h1>
     </a>
-    <div style=" display: flex">
+    <div style=" display: flex" align="center">
       <img width="400" src="./Song/static/images/Imagem1.png" />
       <img width="400" src="./Song/static/images/Imagem2.png" />
       <img width="400" src="./Song/static/images/Imagem3.png" />
@@ -23,16 +23,16 @@
     <summary><h2 style="display: inline-block">Navegue pelo README</h2></summary>
     <ol>
       <li>
-        <a href="#about-the-project">Sobre o projeto</a>
+        <a href="#sobre-o-projeto">Sobre o projeto</a>
         <ul>
-          <li><a href="#built-with">Tecnologias</a></li>
+          <li><a href="#tecnologias-utilizadas">Tecnologias</a></li>
         </ul>
       </li>
       <li>
-        <a href="#getting-started">Para testar</a>
+        <a href="#para-testar">Para testar</a>
         <ul>
-          <li><a href="#prerequisites">Pré requisitos</a></li>
-          <li><a href="#installation">Instalação</a></li>
+          <li><a href="#pré-requisitos">Pré requisitos</a></li>
+          <li><a href="#instalação">Instalação</a></li>
         </ul>
       </li>
     </ol>
