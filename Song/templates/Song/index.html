@@ -8,9 +8,18 @@
   <title>MusicOni</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="{% static 'css/global.css' %}" rel="stylesheet">
+  <link rel="shortcut icon" href="{% static 'icons/music.svg' %}" />
 </head>
 <body>
   {% block content %}
   {% endblock content %}
+
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.tags %}<script>alert("{{ message}}")</script>{% endif %}    
+    {% endfor %}
+  {% endif %}
+
 </body>
+
 </html>

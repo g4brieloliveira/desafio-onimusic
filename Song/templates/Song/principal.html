@@ -1,4 +1,6 @@
 {% extends 'Song/index.html' %}
+{% load static %}
+
 
 {% block content %}
 <div class="principal">
@@ -6,9 +8,16 @@
     <a href="/"><h1>Music<strong>Oni</strong></h1></a>
   </header>
 
+  <div class="background-img"></div>
+
   <div class="principal-buttons">
-    <a class="seeList" href="{% url 'song_list' %}"> Ver lista de músicas <span><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGcgaWQ9Il94MzFfMF8yMV8iPgoJCTxnPgoJCQk8cGF0aCBkPSJNNjMuMzExLDczLjg2MkMyOC4zNDIsNzMuODYyLDAsMTAyLjIwNCwwLDEzNy4xNzJzMjguMzQyLDYzLjMxMSw2My4zMTEsNjMuMzExYzM0Ljk2OCwwLDYzLjMxLTI4LjM0Miw2My4zMS02My4zMTEgICAgIFM5OC4yNzksNzMuODYyLDYzLjMxMSw3My44NjJ6IE02My4zMTEsMjQyLjY4OUMyOC4zNDIsMjQyLjY4OSwwLDI3MS4wMzIsMCwzMDZjMCwzNC45NjksMjguMzQyLDYzLjMxMSw2My4zMTEsNjMuMzExICAgICBjMzQuOTY4LDAsNjMuMzEtMjguMzQyLDYzLjMxLTYzLjMxMUMxMjYuNjIxLDI3MS4wMzIsOTguMjc5LDI0Mi42ODksNjMuMzExLDI0Mi42ODl6IE02My4zMTEsNDExLjUxOCAgICAgQzI4LjM0Miw0MTEuNTE4LDAsNDM5Ljg1OSwwLDQ3NC44MjdjMCwzNC45NjksMjguMzQyLDYzLjMxMSw2My4zMTEsNjMuMzExYzM0Ljk2OCwwLDYzLjMxLTI4LjM0Miw2My4zMS02My4zMTEgICAgIEMxMjYuNjIxLDQzOS44NTksOTguMjc5LDQxMS41MTgsNjMuMzExLDQxMS41MTh6IE0yMzIuMTM4LDE3OS4zNzloMzM3LjY1NWMyMy4zMTksMCw0Mi4yMDctMTguODg4LDQyLjIwNy00Mi4yMDcgICAgIHMtMTguODg4LTQyLjIwNy00Mi4yMDctNDIuMjA3SDIzMi4xMzhjLTIzLjMxOSwwLTQyLjIwNywxOC44ODgtNDIuMjA3LDQyLjIwN1MyMDguODE5LDE3OS4zNzksMjMyLjEzOCwxNzkuMzc5eiAgICAgIE01NjkuNzkzLDI2My43OTNIMjMyLjEzOGMtMjMuMzE5LDAtNDIuMjA3LDE4Ljg4OC00Mi4yMDcsNDIuMjA3czE4Ljg4OCw0Mi4yMDcsNDIuMjA3LDQyLjIwN2gzMzcuNjU1ICAgICBDNTkzLjExMiwzNDguMjA3LDYxMiwzMjkuMzE5LDYxMiwzMDZTNTkzLjExMiwyNjMuNzkzLDU2OS43OTMsMjYzLjc5M3ogTTU2OS43OTMsNDMyLjYyMUgyMzIuMTM4ICAgICBjLTIzLjMxOSwwLTQyLjIwNywxOC44ODctNDIuMjA3LDQyLjIwNnMxOC44ODgsNDIuMjA3LDQyLjIwNyw0Mi4yMDdoMzM3LjY1NWMyMy4zMTksMCw0Mi4yMDctMTguODg4LDQyLjIwNy00Mi4yMDcgICAgIFM1OTMuMTEyLDQzMi42MjEsNTY5Ljc5Myw0MzIuNjIxeiIgZmlsbD0iI2ZmZmZmZiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgc3R5bGU9IiIgY2xhc3M9IiI+PC9wYXRoPgoJCTwvZz4KCTwvZz4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8L2c+PC9zdmc+" /></span></a>
-    <a href="{% url 'song_insert'%}">
+    <div class="principal-anchors shadows">
+      <a class="seeList" href="{% url 'song_list' %}">Lista de músicas<span><img src="{% static 'icons/list.svg' %}" /></span></a>
+      <div class="pipe"></div>
+      <a class="seeList" href="{% url 'song_insert'%}">Registrar música<span><img src="{% static 'icons/register.svg' %}" /></span></a>
+      <div class="pipe"></div>
+      <a class="seeList" href="/admin">Acessar o admin<span><img src="{% static 'icons/admin.svg' %}" /></span></a>
+    </div>
   </div>
 </div>
 {% endblock content %}

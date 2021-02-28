@@ -26,6 +26,7 @@ def song_form(request, id = 0):
       song = Song.objects.get(pk = id)
       form = SongForm(request.POST,instance = song)
     if form.is_valid():
+      messages.success(request, 'Música adicionada com sucesso!')
       form.save()
 
     return redirect('/register')

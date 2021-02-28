@@ -1,45 +1,72 @@
 {% extends 'Song/index.html' %}
+{% load static %}
+
 
 {% block content %}
-<div class="songForm">
-<table class='table'>
-  <theat>
-    <tr>
-      <td>Título</td>
-      <td>Duração</td>
-      <td>Spotify</td>
-      <td>Youtube</td>
-      <td>Artista</td>
-      <td>
-        <a href="{% url 'song_insert'%}">
-          +
-        </a>
-      </td>
-    </tr>
-  </theat>
-  <tbody>
-    {% for song in song_list %}
-      <tr>
-        <td>{{ song.title }}</td>
-        <td>{{ song.duration }}</td>
-        <td>{{ song.spotify_published }}</td>
-        <td>{{ song.youtube_published }}</td>
-        <td>{{ song.artist }}</td>
-        <td>
-          <a href="{% url 'song_update' song.id%}">
-            M
-          </a>
-          <form action="{% url 'song_delete' song.id%}" method="post">
-            {% csrf_token %}
-            <button type="submit">
-              D
-            </button>
-          </form>
-        </td>
+<div class="songList">
+  <header>
+    <a href="/"><h1>Music<strong>Oni</strong></h1></a>
+    <div class="header-buttons">
+      <a href="{% url 'song_insert' %}"> Registrar música <span><img src="{% static 'icons/register.svg' %}" /></span></a>
+      <div class="pipe"></div>
+      <a href="/admin"> Acessar o admin <span><img src="{% static 'icons/admin.svg' %}" /></span></a>
+    </div>
+  </header>
 
+  <div class="background-img"></div>
+
+  <table class='table shadows'>
+    <theat >
+      <tr class="m-t">
+        <td>Artista</td>
+        <td>Música</td>
+        <td>Duração</td>
+        <td>Spotify</td>
+        <td>Youtube</td>
+        <td>Editar / Apagar</td>
       </tr>
-    {% endfor %}
-  </tbody>
-</table>
+    </theat>
+    <tbody >
+      {% for song in song_list %}
+        <tr class="songs">
+          <td>{{ song.artist }}</td>
+          <td>{{ song.title }}</td>
+          <td>{{ song.duration }}</td>
+          <td>{{ song.spotify_published }}</td>
+          <td>{{ song.youtube_published }}</td>
+          <td class="buttons">
+            <a href="{% url 'song_update' song.id%}">
+              <img src="{% static 'icons/modify.svg' %}" />
+            </a>
+            <form action="{% url 'song_delete' song.id%}" method="post">
+              {% csrf_token %}
+              <button type="submit">
+                <img src="{% static 'icons/trash.svg' %}" />
+              </button>
+            </form>
+          </td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
+<script>
+  let i;
+  let counter = 0;
+  for (i = 0; i <=100 ; i++){
+    td = document.querySelectorAll('.songs td')[counter]
+
+    counter = counter + 1
+    if(td.innerHTML == 'True') {
+      td.innerHTML = 'Postado'
+    }
+    else if(td.innerHTML == 'False') {
+      td.innerHTML = 'Não postado'
+    } 
+    else {
+      continue
+    }
+  }
+</script>
 {% endblock content %}

@@ -5,9 +5,9 @@ from .models import Song
 class SongForm(forms.ModelForm):
   class Meta:
     model = Song
-    fields = ('title', 'duration', 'spotify_published', 'youtube_published', 'artist')
+    fields = ( 'artist', 'title', 'duration', 'spotify_published', 'youtube_published')
     labels = {
-      'title': 'Título da música',
+      'title': 'Música',
       'duration': 'Duração da música',
       'spotify_published': 'Spotify',
       'youtube_published': 'YouTube',
