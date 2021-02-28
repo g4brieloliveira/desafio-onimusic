@@ -8,10 +8,10 @@
       <h1 align="center">Music<strong>Oni</strong></h1>
     </a>
     <div style=" display: flex">
-      <img width="300" src="./Song/static/images/Imagem1.png" />
-      <img width="300" src="./Song/static/images/Imagem2.png" />
-      <img width="300" src="./Song/static/images/Imagem3.png" />
-      <img width="300" src="./Song/static/images/Imagem4.png" />
+      <img width="400" src="./Song/static/images/Imagem1.png" />
+      <img width="400" src="./Song/static/images/Imagem2.png" />
+      <img width="400" src="./Song/static/images/Imagem3.png" />
+      <img width="400" src="./Song/static/images/Imagem4.png" />
     </div>
     <p align="center">
       <br />
