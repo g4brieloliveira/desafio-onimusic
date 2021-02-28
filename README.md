@@ -7,11 +7,11 @@
     <a href="https://github.com/g4brieloliveira/desafio-onimusic">
       <h1 align="center">Music<strong>Oni</strong></h1>
     </a>
-    <div style=" display: flex; flex-direction: column;align-items: center;">
-      <img style="width: 300px; height: 168.75px; margin-bottom: 10px;" src="./Song/static/images/Imagem1.png" />
-      <img style="width: 300px; height: 168.75px; margin-bottom: 10px;" src="./Song/static/images/Imagem2.png" />
-      <img style="width: 300px; height: 168.75px; margin-bottom: 10px;" src="./Song/static/images/Imagem3.png" />
-      <img style="width: 300px; height: 168.75px; margin-bottom: 10px;" src="./Song/static/images/Imagem4.png" />
+    <div style=" display: flex">
+      <img width="300" src="./Song/static/images/Imagem1.png" />
+      <img width="300" src="./Song/static/images/Imagem2.png" />
+      <img width="300" src="./Song/static/images/Imagem3.png" />
+      <img width="300" src="./Song/static/images/Imagem4.png" />
     </div>
     <p align="center">
       <br />
